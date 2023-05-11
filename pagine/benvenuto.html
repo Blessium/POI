@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <?php
+            if (isset($_SESSION["isLogged"])) {
+                echo "<h1> Bentornato " . $_SESSION['username'] . "</h1>";
+            } else {
+                echo "<h1> Benvenuto sul POI</h1>";
+            }
+        ?>
+    </body>
+</html>

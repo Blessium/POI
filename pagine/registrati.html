@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <style>
+            <?php include __DIR__ . '/css/registrazione.css'?>
+        </style>
+        <h4> Registrati </h4>
+            <div class="registrazione">
+            <form action="registrati.php" method="post">
+                <input type="text" name="username" placeholder="Username"/>
+                <input type="password" name="password" placeholder="Password"/>
+                <?php 
+                    if (isset($error)) {
+                        echo "<h5>" . $error . "</h5>";
+                    }
+                ?>
+                <input type="submit" value="Registrati">
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <?php 
+                $t = isset($title) ? $title : "default";
+                echo $t;
+            ?>
+        </title>
+        <style>
+            <?php include __DIR__ . "/css/template.css" ?>
+        </style>
+    </head>       
+    <body>
+        <navbar class="navbar_ultron">
+            <ul>
+                <a href="index.php">Home</a>
+                <?php
+                    if(!isset($_SESSION['isLogged'])) {
+                        echo '<a href="registrati.php">Registrati</a>';
+                        echo '<a href="login.php">Login</a>';
+                    } else {
+                        echo '<a href="checkpoi.php">Trova POI</a>';
+                        echo '<a href="logout.php">Esci</a>';
+                    }
+                ?>
+            </ul>
+        </navbar>
+    </body>
+</html>
